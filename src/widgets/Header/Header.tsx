@@ -12,7 +12,7 @@ export default function Header({setIsOpen, isOpen}:IHeader) {
         <h2 className="p-3 bg-slate-300 cursor-pointer hover:opacity-70 transition">Logo</h2>
         <nav>
         <ul className="flex gap-4">
-        {navs.map(nav=> (<li className="px-5 border border-slate-600 rounded-md cursor-pointer hover:shadow-lg transition">{nav}</li>))}
+        {navs.map(nav=> (<li className="px-5 border border-slate-600 rounded-md cursor-pointer hover:shadow-lg transition" key={nav}>{nav}</li>))}
         </ul>
         </nav>
         <UserIcon width={30} className="cursor-pointer" onClick={()=>setIsOpen(!isOpen)}/>
